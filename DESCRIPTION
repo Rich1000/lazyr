@@ -1,0 +1,15 @@
+Package: lazyr
+Title: Time-saving functions for people that hate typing.
+Version: 0.1
+Authors@R: "Richard Eden <richeden57@gmail.com> [aut, cre]"
+Description: Simple shortcuts for common data wrangling operations.
+Depends:
+    R (>= 3.1.1),
+    ggplot2,
+    dplyr,
+    tidyr,
+    lubridate,
+    ggplot2,
+    zoo
+License: None
+LazyData: true
