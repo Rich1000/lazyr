@@ -2,3 +2,4 @@
 
 export(freq)
 export(lu)
+export(month_diff)

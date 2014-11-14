@@ -2,7 +2,7 @@
 % Please edit documentation in R/helper_functions.R
 \name{lu}
 \alias{lu}
-\title{Unique values in a vector}
+\title{Count unique values in a vector}
 \usage{
 lu(x)
 }
@@ -10,7 +10,7 @@ lu(x)
 \item{None.}{}
 }
 \description{
-A short cut to length unique
+A short cut to typing length(unique()), nothing more.
 }
 \examples{
 lu()

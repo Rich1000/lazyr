@@ -15,9 +15,9 @@ freq = function(vector, ordered = FALSE) {
 }
 
 
-#' Unique values in a vector
+#' Count unique values in a vector
 #'
-#' A short cut to length unique
+#' A short cut to typing length(unique()), nothing more.
 #' @param None.
 #' @keywords length unique
 #' @export
@@ -27,6 +27,24 @@ freq = function(vector, ordered = FALSE) {
 lu = function(x) { length(unique(x)) }  
 
 
+#' Calculate the number of calender months between dates
+#'
+#' Author: http://stackoverflow.com/users/143305/dirk-eddelbuettel
+#' @param None.
+#' @keywords date month
+#' @export
+#' @examples
+#' month_diff("1980-03-31", Sys.Date())
+
+month_diff = function(date1, date2) {
+    # turn a date into a 'monthnumber' relative to an origin
+    month_num = function(date) {
+        lt <- as.POSIXlt(as.Date(date, origin = "1900-01-01"))
+        lt$year * 12 + lt$mon
+    }
+    # return the month difference between two monthnumbers
+    month_num(date2) - month_num(date1)
+}
 
 
 
@@ -36,13 +54,9 @@ lu = function(x) { length(unique(x)) }
 
 
 
-monnb = function(d) { lt <- as.POSIXlt(as.Date(d, origin="1900-01-01")); lt$year*12 + lt$mon } 
 
-mondf = function(d1, d2) { monnb(d2) - monnb(d1) }
 
-find_dups = function(x) { z = aggregate(y ~ x, data.frame(x = x, y = rep(1, length(x))), sum) ; z$x[z$y > 1] }
 
-any_dups = function(x) { length(x) - length(unique(x)) != 0 }
 
 gg_colour_hue = function(n) { hues = seq(15, 375, length=n+1); hcl(h=hues, l=65, c=100)[1:n] }
 
