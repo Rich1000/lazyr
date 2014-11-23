@@ -7,13 +7,13 @@
 freq(vector, ordered = FALSE)
 }
 \arguments{
-\item{ordered}{If TRUE the returned data frame is returned with most frequent items at top Defaults to FALSE.}
+\item{ordered}{If TRUE the data frame is returned with most frequent items at top Defaults to FALSE.}
 }
 \description{
 Check the frequencies of values in a vector.
 }
 \examples{
-freq()
+freq(c(1, 1, 2, 3))
 }
 \keyword{table}
 

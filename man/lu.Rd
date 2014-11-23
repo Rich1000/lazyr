@@ -7,13 +7,13 @@
 lu(x)
 }
 \arguments{
-\item{None.}{}
+\item{None}{}
 }
 \description{
 A short cut to typing length(unique()), nothing more.
 }
 \examples{
-lu()
+lu(c(1, 1, 2, 3)
 }
 \keyword{length}
 \keyword{unique}
